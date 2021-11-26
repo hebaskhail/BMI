@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">BMI Analyzer</string>
+    <string name="login_content_welcome">Welcome Back</string>
+    <string name="login_content">if you already have an account, log in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOG IN</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="dont_have_account">You Don\'t Have an Account?</string>
+    <string name="have_account">You Have an Account?</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="if_you_do_not_already_have_an_account">If you do not already have an account</string>
+    <string name="re_password">Re-Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="complete_your_information">Complete Your Information</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="length">Length</string>
+    <string name="current_status">Current Status</string>
+    <string name="old_status">Old Status</string>
+    <string name="logout">Logout</string>
+    <string name="add_food">Add Food</string>
+    <string name="add_record">Add Record</string>
+    <string name="view_food">View Food</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="save_data">Save Data</string>
+    <string name="category">Category</string>
+    <string name="calory">Calory</string>
+    <string name="photo">Photo</string>
+    <string name="add_food_details">Add Food Details</string>
+    <string name="edit">Edit</string>
+    <string name="food">Food</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="add_meal_details">Add Meal Details</string>
+    <string name="upload_photo">upload Photo</string>
+
+</resources>
