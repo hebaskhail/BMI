@@ -7,6 +7,21 @@
     android:background="@drawable/shape_custom_background"
     tools:context=".HomeActivity">
 
+    <Button
+        android:id="@+id/btnAddMael"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/app_color"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/add_mael"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnViewFoods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnViewFoods"
+        app:layout_constraintTop_toTopOf="@+id/btnViewFoods" />
+
     <TextView
 
         android:id="@+id/loginWelcome"
@@ -15,7 +30,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="Hi, Heba"
+        tools:text="Hi, Heba"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,22 +44,22 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/current_status"
         android:textColor="@color/app_color"
         android:textSize="16sp"
-        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginWelcome" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtCurrent"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/shape_input_info"
-        android:gravity="center"
         android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
         android:text="Normal (still Good)"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,82 +71,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/old_status"
         android:textColor="@color/app_color"
         android:textSize="16sp"
-        android:fontFamily="@font/poppins_medium"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="@+id/txtCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStatus"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        tools:listitem="@layout/row_old_status"
         android:background="@drawable/shape_home_list"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:listitem="@layout/row_old_status" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginBottom="26dp"
-        android:text="@string/logout"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/logout"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnViewFoods"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="@color/app_color"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/view_food"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddMael"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnAddFood"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/app_color"
+        android:fontFamily="@font/poppins_bold"
         android:text="@string/add_food"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_bold"
-        android:backgroundTint="@color/app_color"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewFoods"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddRecord"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnAddRecord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/app_color"
+        android:fontFamily="@font/poppins_bold"
         android:text="@string/add_record"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_bold"
-        android:backgroundTint="@color/app_color"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddFood"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnAddFood"
+        app:layout_constraintTop_toTopOf="@+id/btnAddFood" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

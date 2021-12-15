@@ -4,52 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
     android:background="@drawable/shape_input_info">
 
+    <View
+        android:layout_width="1.5dp"
+        android:layout_height="70dp"
+        android:background="@color/app_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgRow"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgRow"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/txtNameFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="name"
 
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/txtCategoryFood"
+        app:layout_constraintStart_toEndOf="@+id/imgRow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txtCategoryFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="category"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        app:layout_constraintStart_toStartOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintBottom_toTopOf="@+id/txtCalory"
+        app:layout_constraintStart_toStartOf="@+id/txtNameFood"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameFood" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/txtCalory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="25 cal/g"
         android:textSize="12sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintStart_toStartOf="@+id/txtCategoryFood"
+        app:layout_constraintTop_toBottomOf="@+id/txtCategoryFood" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnEdit"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginTop="4dp"
@@ -62,12 +77,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+        app:layout_constraintStart_toStartOf="@+id/btnEdit"
+        app:layout_constraintTop_toBottomOf="@+id/btnEdit"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+        app:tint="@color/app_color" />
 </androidx.constraintlayout.widget.ConstraintLayout>

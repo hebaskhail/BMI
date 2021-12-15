@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnAddImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -36,7 +36,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/btnAddImage"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -54,7 +54,7 @@
 
     <TextView
 
-        android:id="@+id/loginWelcome2"
+        android:id="@+id/titlePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -79,7 +79,7 @@
         android:textColor="@color/app_color"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginWelcome2" />
+        app:layout_constraintTop_toBottomOf="@+id/titlePage" />
 
     <TextView
         android:id="@+id/textView3"
@@ -106,26 +106,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editName"
         android:layout_width="145dp"
         android:layout_height="26dp"
         android:background="@drawable/shape_input_info"
         android:gravity="center"
-        android:inputType="numberSigned"
+        android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/editText1"
-        app:layout_constraintStart_toStartOf="@+id/editText1"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerCategory"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCategory"
         app:layout_constraintTop_toTopOf="@+id/textView2"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <Spinner
-        android:id="@+id/editText1"
+        android:id="@+id/spinnerCategory"
         android:layout_width="150dp"
         android:layout_height="0dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/shape_input_info"
         android:gravity="center"
+        android:entries="@array/category"
         android:inputType="numberSigned"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
@@ -134,27 +135,29 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/textView5"
+        android:id="@+id/editCalory"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/shape_input_info"
         android:gravity="center"
         android:text=""
+        android:inputType="numberSigned"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView22"
-        app:layout_constraintStart_toStartOf="@+id/editText1"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerCalory"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCategory"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cal/g"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/editText1"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+    <Spinner
+        android:id="@+id/spinnerCalory"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:entries="@array/calory_type"
+        android:background="@drawable/shape_input_info"
+        app:layout_constraintBottom_toBottomOf="@+id/editCalory"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerCategory"
+        app:layout_constraintTop_toTopOf="@+id/editCalory" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -164,6 +167,6 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:srcCompat="@drawable/logo" />
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
