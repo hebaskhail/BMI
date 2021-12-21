@@ -8,6 +8,8 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.hebaskhail.bmi.Model.LocalData;
+
 import java.util.Objects;
 
 @SuppressLint("CustomSplashScreen")
@@ -27,6 +29,8 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+            if (new LocalData(SplashActivity.this).getToken()!=null)
+                intent= new Intent(SplashActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }, SPLASH_SCREEN);

@@ -36,5 +36,22 @@
     <string name="save">Save</string>
     <string name="add_meal_details">Add Meal Details</string>
     <string name="upload_photo">upload Photo</string>
+    <string name="add_mael">Add Mael</string>
+    <array name="category">
+        <item>fish</item>
+        <item>fat</item>
+        <item>Protein</item>
+        <item>Dairy</item>
+        <item>Starchy</item>
+        <item>Fruit</item>
+        <item>vegetables</item>
+        <item>others</item>
+    </array>
+    <array name="calory_type">
+        <item>cal/spoon</item>
+        <item>cal/cup</item>
+        <item>cal/g</item>
+        <item>cal/piece</item>
+    </array>
 
 </resources>
